@@ -134,7 +134,11 @@ footer {
     background-color: #595;
     text-align: center;
     clear: both;
-    position: relative;
+    /*position: relative;*/
     bottom: 0px;
     padding: 20px;
+}
+
+* {
+    box-sizing: border-box;
 }
