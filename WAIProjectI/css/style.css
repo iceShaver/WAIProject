@@ -36,80 +36,80 @@ nav {
     margin: 0 auto;
 }
 
-    nav ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        font-size: 18px;
-        height: 40px;
-        line-height: 200%;
-        display: inline-block;
-    }
+nav .menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 18px;
+    height: 40px;
+    line-height: 200%;
+    display: inline-block;
+}
 
-        nav ul a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            height: 40px;
-        }
+nav .menu ul a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    height: 40px;
+}
 
-    nav > ul > li:hover > a {
-        color: #afa;
-    }
+nav > .menu > ul > li:hover > a {
+    color: #afa;
+}
 
-    nav > ul > li {
-        float: left;
-        width: 150px;
-        height: 40px;
-        /*border-right: 1px dashed #fff;*/
-    }
+nav > .menu > ul > li {
+    float: left;
+    width: 150px;
+    height: 40px;
+    /*border-right: 1px dashed #fff;*/
+}
 
-        nav > ul > li:hover {
-            background-color: #484;
-        }
+nav > .menu > ul > li:hover {
+    background-color: #484;
+}
 
-        nav > ul > li:first-child {
-            /*border-left: 1px dashed #fff;*/
-        }
+nav .menu > ul > li:first-child {
+    /*border-left: 1px dashed #fff;*/
+}
 
-        nav > ul > li > ul {
-            display: none;
-        }
+nav > .menu > ul > li > ul {
+    display: none;
+}
 
-        nav > ul > li:hover > ul {
-            display: block;
-        }
+nav > .menu > ul > li:hover > ul {
+    display: block;
+}
 
-        nav > ul > li > ul > li {
-            background-color: #6a6;
-            position: relative;
-            float: left;
-            width: 150px;
-            height: 40px;
-            z-index: 80;
-            border-top: 1px dashed #fff;
-        }
+nav> .menu > ul > li > ul > li {
+    background-color: #6a6;
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 40px;
+    z-index: 80;
+    border-top: 1px dashed #fff;
+}
 
-            nav > ul > li > ul > li:hover {
-                background-color: #595;
-            }
+nav>.menu  > ul > li > ul > li:hover {
+    background-color: #595;
+}
 
-                nav > ul > li > ul > li:hover > a {
-                    color: #afa;
-                }
+nav>.menu  > ul > li > ul > li:hover > a {
+    color: #afa;
+}
 
-    nav > .switch {
+label[for=switch] {
 
-        background-color: #000;
-        height: 40px;
-        width: 40px;
-        padding: 0;
-        margin: 0;
-        /*display: inline-block;*/
-        position: absolute;
-        right: 0px;
-        display: none;
-    }
+    background-color: #000;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    /*display: inline-block;*/
+    position: absolute;
+    right: 0px;
+    display: none;
+}
 
 .nav-docked {
     z-index: 80;
@@ -123,14 +123,12 @@ nav {
     margin-top: 42px;
 }
 
-
 .container {
     background-color: #fff;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .col1 {
     padding: 20px;
@@ -163,16 +161,28 @@ footer {
     padding: 20px;
 }
 
+input#switch {
+    display: none;
+}
+
 * {
     box-sizing: border-box;
 }
 
 @media screen and  (max-width: 1100px) {
-    
+
 }
 
 @media screen and (max-width: 680px) {
-    nav > .switch {
-        display: inline-block;
+   nav > .menu {
+        display: none;
+    }
+
+    label[for=switch] {
+        display: block;
+    }
+
+    input#switch:checked ~ .menu{
+        display: block;
     }
 }
