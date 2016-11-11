@@ -1,26 +1,29 @@
 ﻿
+
 body {
     background-color: #f4f4f4;
     color: #000;
     margin: 0 !important;
 }
-
+* {
+    box-sizing: border-box;
+}
 .wrapper {
     width: 100%;
 }
 
+/*----------------------------------------------NAV---------------------------------------*/
 header {
     background-color: #fff;
-    width: 1000px;
+    width: 90%;
     padding: 40px 0;
     text-align: center;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+
     font-size: 48px;
 }
 
@@ -32,7 +35,6 @@ nav {
     border-bottom: 1px solid #373;
     height: 40px;
     text-align: center;
-    width: 1000px;
     margin: 0 auto;
 }
 
@@ -104,11 +106,11 @@ label[for=switch] {
     height: 40px;
     width: 40px;
     padding: 0;
-    margin: 0;
     /*display: inline-block;*/
     position: absolute;
     right: 0px;
     display: none;
+    margin-top: -1px;
 }
 
 .nav-docked {
@@ -122,32 +124,35 @@ label[for=switch] {
 .container-nav-docked {
     margin-top: 42px;
 }
+/*---------------------------------------BODY-------------------------------------------*/
+
 
 .container {
     background-color: #fff;
-    width: 1000px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .col1 {
+
     padding: 20px;
-    width: 140px;
+    width: 15%;
     float: left;
     min-height: 600px;
 }
 
 .content {
-    width: 780px;
+    width: 70%;
     float: left;
     padding: 20px;
     text-align: justify;
 }
 
 .col2 {
-    display: none;
+
     padding: 20px;
-    width: 140px;
+    width: 15%;
     float: left;
     min-height: 600px;
 }
@@ -159,21 +164,49 @@ footer {
     /*position: relative;*/
     bottom: 0px;
     padding: 20px;
+    width: 100%
 }
 
 input#switch {
     display: none;
 }
 
-* {
-    box-sizing: border-box;
-}
 
+/*----------------------------------------RESPONSIVE------------------------------------*/
 @media screen and  (max-width: 1100px) {
+    header{
+        width: 100%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+    .col1{
+        float:none;
+        width: 100%;
+        order:2;
 
+    }
+    .content{
+        float:none;
+        width: 100%;
+        order:1;
+
+    }
+    .col2{
+        float:none;
+        width: 100%;
+        order:3;
+    }
+    footer{
+        float: none;
+        width: 100%;
+        order: 4;
+    }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 750px) {
    nav > .menu {
         display: none;
     }
@@ -184,5 +217,26 @@ input#switch {
 
     input#switch:checked ~ .menu{
         display: block;
+
     }
+    input#switch:checked ~ .menu > ul > li{
+        float:none;
+
+    }
+    nav{
+        height:auto;
+        min-height: 40px;
+        text-align: center;
+    }
+    header{
+        width: 100%;
+    }
+    .content{
+        padding:10px;
+    }
+    header{
+        padding: 10px;
+    }
+
+
 }
