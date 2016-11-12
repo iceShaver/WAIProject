@@ -1,31 +1,45 @@
 ﻿
+@font-face
 
+{
+
+font-family: Lato;
+
+src: local(Lato), url(../Fonts/Lato-Regular.ttf) format("truetype");
+
+}
 body {
     background-color: #f4f4f4;
     color: #000;
     margin: 0 !important;
+    font-family: 'Lato',sans-serif;
 }
-* {
-    box-sizing: border-box;
-}
+
 .wrapper {
     width: 100%;
 }
-
-/*----------------------------------------------NAV---------------------------------------*/
 header {
     background-color: #fff;
-    width: 90%;
-    padding: 40px 0;
+    width: 100%;
+    padding: 0;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
 .logo {
-
+    color: white;
     font-size: 48px;
+    height: 180px;
+    background-image: url(../images/pexels-photo-113850.jpeg);
+    background-size: 100%;
+    padding: 50px 200px 0px 0px;
+    margin: 0;
+    text-align: right;
 }
+
+/*----------------------------------------------NAV---------------------------------------*/
+
 
 nav {
     width: 100%;
@@ -128,35 +142,47 @@ label[for=switch] {
 
 
 .container {
-    background-color: #fff;
-    width: 90%;
+
+    width: 1500px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .col1 {
-
-    padding: 20px;
-    width: 15%;
+        background-color: #fff;
+    padding: 0px;
+    width: 250px;
     float: left;
     min-height: 600px;
+    margin: 10px 10px 0 0;
 }
 
 .content {
-    width: 70%;
+        background-color: #fff;
+    width: 960px;
     float: left;
-    padding: 20px;
+    padding: 0px;
     text-align: justify;
+    margin: 10px 10px 0 10px;
 }
 
 .col2 {
-
-    padding: 20px;
-    width: 15%;
+        background-color: #fff;
+    padding: 0px;
+    width: 250px;
     float: left;
     min-height: 600px;
+    margin: 10px 0 0 10px;
 }
-
+#title {
+    /*width: 100%;*/
+    background-color: #595;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+}
+#text {
+    padding: 20px;
+}
 footer {
     background-color: #595;
     text-align: center;
@@ -233,9 +259,6 @@ input#switch {
     }
     .content{
         padding:10px;
-    }
-    header{
-        padding: 10px;
     }
 
 
