@@ -105,25 +105,9 @@ nav > .menu > ul > li > ul {
      transition: 200ms; /* wydłużamy wykonywanie stylów */
 
 }
-/*@-moz-keyframes slide-down {
-    from { height: 0px; }
-    to { height: auto; }
-}
 
-@-webkit-keyframes slide-down {
-    from { height: 0px; }
-    to { height: auto; }
-}
-
-@keyframes slide-down {
-    from { height: 0px; }
-    to { height: 100%; }
-}*/
 nav > .menu > ul > li:hover > ul {
-    /*-ms-animation: 100ms 1 slide-down linear;
-    -webkit-animation: 100ms 1 slide-down linear;
-    animation: 100ms 1 slide-down linear;*/
-    /*display: block;*/
+
     visibility: visible;
      transform: scaleY(1); /* rozwijamy element do całej jego wysokości */
      -webkit-transform: scaleY(1);
@@ -200,7 +184,7 @@ input#switch {
     padding: 0px;
     width: 250px;
     float: left;
-    min-height: 600px;
+    min-height: 700px;
     margin: 10px 10px 10px 10px;
 }
 
@@ -211,6 +195,7 @@ input#switch {
     padding: 0px;
     text-align: justify;
     margin: 10px 10px 10px 10px;
+    min-height: 700px;
 }
 
 .col2 {
@@ -218,10 +203,14 @@ input#switch {
     padding: 0px;
     width: 250px;
     float: left;
-    min-height: 600px;
+    min-height: 700px;
     margin: 10px 10px 10px 10px;
 }
-#title {
+
+.col2 a {
+    display: block;
+}
+.title {
     /*width: 100%;*/
     font-size: 20px;
     color: #fff;
@@ -276,7 +265,25 @@ footer {
     width: 33.3%;
 }
 
+/*----------------------------------------FORMS------------------------------------------*/
 
+
+/*input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}*/
+fieldset {
+    box-sizing: border-box;
+    float: left;
+    height: 450px;
+}
+fieldset:first-of-type {
+    width: 340px;
+}
+fieldset:last-of-type {
+    width: 550px;
+}
 
 /*----------------------------------------RESPONSIVE------------------------------------*/
 
@@ -287,6 +294,11 @@ footer {
     .content {
         width: 640px;
     }
+    fieldset {
+        width: 100% !important;
+        height: auto;
+    }
+    
 }
 
 
@@ -301,18 +313,21 @@ footer {
         width: 100%
     }
     .col1{
+        min-height: 0px;
         float:none;
         width: auto;
         order:2;
 
     }
     .content{
+        min-height: 0px;
         float:none;
         width: auto;
         order:1;
 
     }
     .col2{
+        min-height: 0px;
         float:none;
         width: auto;
         order:3;

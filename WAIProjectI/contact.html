@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Moje hobby - Strona główna</title>
+    <meta name="description" content="Strona o moim hobby" />
+    <meta name="keywords" content="hobby, moje, strona, www" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="Scripts/jquery-3.1.1.min.js" defer></script>
+    <script type="text/javascript" src="Scripts/main.js" defer></script>
+</head>
+<body>
+    <span id="top"></span>
+    <div class="wrapper">
+        <header>
+
+            <div class="logo">
+                Programowanie
+            </div>
+
+
+        </header>
+        <nav>
+            <input id="switch" type="checkbox" />
+            <label for="switch">&#9776;<!--&#8801;--></label>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li>
+                        <a href="popular.html">Popularne języki</a>
+                        <ul>
+                            <li><a href="#">Podlink 1-1</a></li>
+                            <li><a href="#">Podlink 1-2</a></li>
+                            <li><a href="#">Podlink 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Link 2</a>
+
+                    </li>
+                    <li>
+                        <a href="gallery.html">Galeria</a>
+
+                    </li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="container">
+
+
+            <div class="col1 block">
+                <div class="title">Ostanie artykuły</div>
+                <div id="text">
+                    Brak
+                </div>
+            </div>
+            <div class="content block">
+                <div class="title">Strona główna</div>
+                <div id="text">
+                    <form action="mailto:kamil-krolikowski@outlook.com" method="post">
+                        <fieldset>
+                            <legend>Informacje o Tobie</legend>
+                            <p>
+                                <label for="name">Imię</label><br/>
+                                <input type="text" id="name" name="name" />
+                            </p>
+                            <p>
+                                <label for="surname">Nazwisko</label><br/>
+                                <input type="text" id="surname" name="surname" />
+                            </p>
+                            <p>
+                                <label for="dateOfBirth">Data urodzenia</label><br/>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" />
+                            </p>
+                            <p>
+                                Czy jesteś programistą?<br/>
+                                <input type="radio" id="isProgrammerTrue" name="isProgrammer" value="yes" />
+                                <label for="isProgrammerTrue">Tak</label>
+                                <input type="radio" id="isProgrammerFalse" name="isProgrammer" value="no" />
+                                <label for="isProgrammerFalse">Nie</label>
+                            </p>
+                            <p>
+                                Twoje ulubione języki programowania<br/>
+                                <input type="checkbox" name="favourites" id="c" value="c" />
+                                <label for="c">C/C++</label><br/>
+                                <input type="checkbox" name="favourites" id="c#" value="c#" />
+                                <label for="c#">C#</label><br />
+                                <input type="checkbox" name="favourites" id="java" value="java" />
+                                <label for="java">Java</label><br />
+                                <input type="checkbox" name="favourites" id="js" value="js" />
+                                <label for="js">JavaScript</label><br />
+                                <input type="checkbox" name="favourites" id="php" value="php" />
+                                <label for="php">PHP</label><br />
+                                <input type="checkbox" name="favourites" id="pascal" value="pascal" />
+                                <label for="pascal">Pascal</label><br />
+                                <input type="checkbox" name="favourites" id="python" value="python" />
+                                <label for="python">Python</label>
+                            </p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Wiadomość</legend>
+                            <p>
+                                <label for="subject">Temat</label><br/>
+                                <select id="subject" name="subject">
+                                    <option>Zapytanie dotyczące programowania</option>
+                                    <option>Coś na stronie nie działa</option>
+                                    <option>Oferta współpracy</option>
+                                    <option>Inne</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="message">Tutaj wpisz swoją wiadomość</label>
+                                <br/>
+                                <textarea id="message"></textarea>
+                            </p>
+                        </fieldset>
+                        <div style="clear: both"></div>
+                        <input type="submit" id="submit" value="Wyślij" />
+                        <input type="reset" id="clear" value="Wyczyść"/>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="col2 block">
+                <div class="title">Przydatne linki</div>
+                <div id="text">
+                    <a href="http://stackoverflow.com/" target="_blank">Stack overflow</a>
+                    <a href="https://channel9.msdn.com/" target="_blank">Channel9</a>
+                    <a href="https://mva.microsoft.com/" target="_blank">Microsoft Virtual Academy</a>
+                    <a href="http://www.tutorialspoint.com/" target="_blank">Tutorials Point</a>
+
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer-left">
+                <a class="footer-a" href="#top">&uarr;</a>
+            </div>
+            <div class="footer-center">
+                &copy; 2016 Kamil Królikowski
+
+
+            </div>
+            <div class="footer-right">
+                <a class="footer-a" href="mailto:kamil-krolikowski@outlook.com">&#9993;</a>
+            </div>
+
+        </footer>
+    </div>
+</body>
+</html>
