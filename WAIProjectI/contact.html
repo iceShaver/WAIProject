@@ -2,9 +2,9 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8" />
-    <title>Moje hobby - Strona główna</title>
-    <meta name="description" content="Strona o moim hobby" />
-    <meta name="keywords" content="hobby, moje, strona, www" />
+    <title>Filmy</title>
+    <meta name="description" content="Strona o filmach" />
+    <meta name="keywords" content="hobby, moje, strona, www, filmy, wideo, kino" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
@@ -17,7 +17,7 @@
         <header>
 
             <div class="logo">
-                Programowanie
+                Filmy
             </div>
 
 
@@ -29,15 +29,14 @@
                 <ul>
                     <li><a href="index.html">Strona główna</a></li>
                     <li>
-                        <a href="popular.html">Popularne języki</a>
+                        <a href="#">Popularne filmy</a>
                         <ul>
-                            <li><a href="#">Podlink 1-1</a></li>
-                            <li><a href="#">Podlink 1-2</a></li>
-                            <li><a href="#">Podlink 1-3</a></li>
+                            <li><a href="polishFilms.html">Polskie</a></li>
+                            <li><a href="foreignFilms.html">Zagraniczne</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Link 2</a>
+                        <a href="actors.html">Znani aktorzy</a>
 
                     </li>
                     <li>
@@ -54,59 +53,59 @@
 
             <div class="col1 block">
                 <div class="title">Ostanie artykuły</div>
-                <div id="text">
-                    Brak
+                <div class="text">
+                    Ostatnio nie dodano nowych artykułów
                 </div>
             </div>
             <div class="content block">
-                <div class="title">Strona główna</div>
-                <div id="text">
+                <div class="title">Kontakt</div>
+                <div class="text">
                     <form action="mailto:kamil-krolikowski@outlook.com" method="post">
                         <fieldset>
                             <legend>Informacje o Tobie</legend>
                             <p>
-                                <label for="name">Imię</label><br/>
+                                <label for="name">Imię</label><br />
                                 <input type="text" id="name" name="name" />
                             </p>
                             <p>
-                                <label for="surname">Nazwisko</label><br/>
+                                <label for="surname">Nazwisko</label><br />
                                 <input type="text" id="surname" name="surname" />
                             </p>
                             <p>
-                                <label for="dateOfBirth">Data urodzenia</label><br/>
+                                <label for="dateOfBirth">Data urodzenia</label><br />
                                 <input type="date" id="dateOfBirth" name="dateOfBirth" />
                             </p>
                             <p>
-                                Czy jesteś programistą?<br/>
+                                Czy lubisz oglądać filmy?<br />
                                 <input type="radio" id="isProgrammerTrue" name="isProgrammer" value="yes" />
                                 <label for="isProgrammerTrue">Tak</label>
                                 <input type="radio" id="isProgrammerFalse" name="isProgrammer" value="no" />
                                 <label for="isProgrammerFalse">Nie</label>
                             </p>
                             <p>
-                                Twoje ulubione języki programowania<br/>
-                                <input type="checkbox" name="favourites" id="c" value="c" />
-                                <label for="c">C/C++</label><br/>
-                                <input type="checkbox" name="favourites" id="c#" value="c#" />
-                                <label for="c#">C#</label><br />
-                                <input type="checkbox" name="favourites" id="java" value="java" />
-                                <label for="java">Java</label><br />
-                                <input type="checkbox" name="favourites" id="js" value="js" />
-                                <label for="js">JavaScript</label><br />
-                                <input type="checkbox" name="favourites" id="php" value="php" />
-                                <label for="php">PHP</label><br />
-                                <input type="checkbox" name="favourites" id="pascal" value="pascal" />
-                                <label for="pascal">Pascal</label><br />
-                                <input type="checkbox" name="favourites" id="python" value="python" />
-                                <label for="python">Python</label>
+                                Twoje ulubione rodzaje filmów<br />
+                                <input type="checkbox" name="favourites" id="horror" value="horror" />
+                                <label for="horror">Horror</label><br />
+                                <input type="checkbox" name="favourites" id="comedy" value="comedy" />
+                                <label for="comedy">Komedia</label><br />
+                                <input type="checkbox" name="favourites" id="war" value="war" />
+                                <label for="war">Wojenne</label><br />
+                                <input type="checkbox" name="favourites" id="fantasy" value="fantasy" />
+                                <label for="fantasy">Fantasy</label><br />
+                                <input type="checkbox" name="favourites" id="sciFi" value="sciFi" />
+                                <label for="sciFi">Science-fiction</label><br />
+                                <input type="checkbox" name="favourites" id="historical" value="historical" />
+                                <label for="historical">Historyczne</label><br />
+                                <input type="checkbox" name="favourites" id="others" value="others" />
+                                <label for="others">Inne</label>
                             </p>
                         </fieldset>
                         <fieldset>
                             <legend>Wiadomość</legend>
                             <p>
-                                <label for="subject">Temat</label><br/>
+                                <label for="subject">Temat</label><br />
                                 <select id="subject" name="subject">
-                                    <option>Zapytanie dotyczące programowania</option>
+                                    <option>Zgłoś nowy film</option>
                                     <option>Coś na stronie nie działa</option>
                                     <option>Oferta współpracy</option>
                                     <option>Inne</option>
@@ -114,24 +113,23 @@
                             </p>
                             <p>
                                 <label for="message">Tutaj wpisz swoją wiadomość</label>
-                                <br/>
+                                <br />
                                 <textarea id="message"></textarea>
                             </p>
                         </fieldset>
                         <div style="clear: both"></div>
                         <input type="submit" id="submit" value="Wyślij" />
-                        <input type="reset" id="clear" value="Wyczyść"/>
-                        
+                        <input type="reset" id="clear" value="Wyczyść" />
+
                     </form>
                 </div>
             </div>
             <div class="col2 block">
-                <div class="title">Przydatne linki</div>
-                <div id="text">
-                    <a href="http://stackoverflow.com/" target="_blank">Stack overflow</a>
-                    <a href="https://channel9.msdn.com/" target="_blank">Channel9</a>
-                    <a href="https://mva.microsoft.com/" target="_blank">Microsoft Virtual Academy</a>
-                    <a href="http://www.tutorialspoint.com/" target="_blank">Tutorials Point</a>
+                <div class="title">Strony o filmach</div>
+                <div class="text">
+                    <a href="http://imdb.com/" target="_blank">IMDB</a>
+                    <a href="http://filmweb.pl/" target="_blank">FilmWeb</a>
+                    <a href="http://film.onet.pl/" target="_blank">Onet.Film</a>
 
                 </div>
             </div>

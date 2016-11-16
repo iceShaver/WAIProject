@@ -1,20 +1,13 @@
 ﻿
-@font-face
-
-{
-
-font-family: Lato;
-
-src: local(Lato), url(../Fonts/Lato-Regular.ttf) format("truetype");
-
+@font-face {
+    font-family: Lato;
+    src: local(Lato), url(../Fonts/Lato-Regular.ttf) format("truetype");
 }
-/** {
-    box-sizing: border-box;
-}*/
+
+
 body {
     background-image: url(../images/seigaiha.png);
     background-attachment: fixed;
-    /*background-color: #f4f4f4;*/
     color: #000;
     margin: 0 !important;
     font-family: 'Lato',sans-serif;
@@ -23,6 +16,7 @@ body {
 .wrapper {
     width: 100%;
 }
+
 header {
     background-color: #fff;
     width: 100%;
@@ -32,15 +26,18 @@ header {
     margin-right: auto;
 }
 
+header {
+    height: 180px;
+    background-image: url(../images/pexels-photo-27008.jpg);
+    background-size: 100%;
+}
+
 .logo {
     color: white;
-    font-size: 48px;
-    height: 180px;
-    background-image: url(../images/pexels-photo-113850.jpeg);
-    background-size: 100%;
-    padding: 50px 200px 0px 0px;
+    font-size: 80px;
     margin: 0;
     text-align: right;
+    padding: 50px 200px 0px 0px;
 }
 
 /*----------------------------------------------NAV---------------------------------------*/
@@ -55,82 +52,73 @@ nav {
     height: 40px;
     text-align: center;
     margin: 0 auto;
+    /*box-shadow: -1px 5px 10px #999;*/
 }
 
-nav .menu ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    font-size: 18px;
-    height: 40px;
-    line-height: 200%;
-    display: inline-block;
-}
+    nav .menu ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        font-size: 18px;
+        height: 40px;
+        line-height: 200%;
+        display: inline-block;
+    }
 
-nav .menu ul a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    height: 40px;
-}
+        nav .menu ul a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            height: 40px;
+        }
 
-nav > .menu > ul > li:hover > a {
-    color: #afa;
-}
+    nav > .menu > ul > li:hover > a {
+        color: #afa;
+    }
 
-nav > .menu > ul > li {
-    float: left;
-    width: 150px;
-    height: 40px;
-    /*border-right: 1px dashed #fff;*/
-}
+    nav > .menu > ul > li {
+        float: left;
+        width: 150px;
+        height: 40px;
+    }
 
-nav > .menu > ul > li:hover {
-    background-color: #484;
-}
+        nav > .menu > ul > li:hover {
+            background-color: #484;
+        }
 
-nav .menu > ul > li:first-child {
-    /*border-left: 1px dashed #fff;*/
-}
+        nav > .menu > ul > li > ul {
+            visibility: hidden;
+            transform: scaleY(0); /* zwijamy cały element */
+            -webkit-transform: scaleY(0);
+            transform-origin: 50% 0; /* ustawiamy punkt zwijania względem środka górnej krawędzi */
+            -webkit-transform-origin: 50% 0;
+            transition: 200ms; /* wydłużamy wykonywanie stylów */
+        }
 
-nav > .menu > ul > li > ul {
-    /*display: none;*/
-    /*overflow: hidden;*/
-    visibility: hidden;
+        nav > .menu > ul > li:hover > ul {
+            visibility: visible;
+            transform: scaleY(1); /* rozwijamy element do całej jego wysokości */
+            -webkit-transform: scaleY(1);
+            height: auto;
+        }
 
-    transform: scaleY(0); /* zwijamy cały element */
-     -webkit-transform: scaleY(0);
-     transform-origin: 50% 0; /* ustawiamy punkt zwijania względem środka górnej krawędzi */
-     -webkit-transform-origin: 50% 0;
-     transition: 200ms; /* wydłużamy wykonywanie stylów */
+        nav > .menu > ul > li > ul > li {
+            background-color: #6a6;
+            position: relative;
+            float: left;
+            width: 150px;
+            height: 40px;
+            z-index: 80;
+            border-top: 1px dashed #fff;
+        }
 
-}
+            nav > .menu > ul > li > ul > li:hover {
+                background-color: #595;
+            }
 
-nav > .menu > ul > li:hover > ul {
-
-    visibility: visible;
-     transform: scaleY(1); /* rozwijamy element do całej jego wysokości */
-     -webkit-transform: scaleY(1);
-    height: auto;
-}
-
-nav> .menu > ul > li > ul > li {
-    background-color: #6a6;
-    position: relative;
-    float: left;
-    width: 150px;
-    height: 40px;
-    z-index: 80;
-    border-top: 1px dashed #fff;
-}
-
-nav>.menu  > ul > li > ul > li:hover {
-    background-color: #595;
-}
-
-nav>.menu  > ul > li > ul > li:hover > a {
-    color: #afa;
-}
+                nav > .menu > ul > li > ul > li:hover > a {
+                    color: #afa;
+                }
 
 label[for=switch] {
     color: #fff;
@@ -140,7 +128,6 @@ label[for=switch] {
     height: 40px;
     width: 40px;
     padding: 0;
-    /*display: inline-block;*/
     position: absolute;
     right: 0px;
     display: none;
@@ -167,20 +154,18 @@ input#switch {
 
 
 .container {
-
     width: 1500px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .block {
-        border-radius: 5px;
+    border-radius: 5px;
     box-shadow: 5px 5px 10px #999;
 }
 
 .col1 {
-
-        background-color: #fff;
+    background-color: #fff;
     padding: 0px;
     width: 250px;
     float: left;
@@ -189,7 +174,7 @@ input#switch {
 }
 
 .content {
-        background-color: #fff;
+    background-color: #fff;
     width: 940px;
     float: left;
     padding: 0px;
@@ -199,7 +184,7 @@ input#switch {
 }
 
 .col2 {
-        background-color: #fff;
+    background-color: #fff;
     padding: 0px;
     width: 250px;
     float: left;
@@ -207,32 +192,47 @@ input#switch {
     margin: 10px 10px 10px 10px;
 }
 
-.col2 a {
-    display: block;
-}
+    .col2 > .text {
+        padding: 0px;
+    }
+
+    .col2 a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        background-color: #6a6;
+        padding: 5px;
+        text-align: center;
+        margin-bottom: 1px;
+    }
+
+        .col2 a:hover {
+            background-color: #484;
+        }
+
 .title {
-    /*width: 100%;*/
     font-size: 20px;
     color: #fff;
     background-color: #595;
     padding: 10px 10px 10px 20px;
     margin: 20px 0 20px 0;
 }
-#text {
+
+.text {
     padding: 20px;
 }
+
 footer {
     color: #fff;
     background-color: #595;
-    /*text-align: center;*/
     clear: both;
-    /*position: relative;*/
     bottom: 0px;
     padding: 0px;
     width: 100%;
     overflow: auto;
-    min-height:40px;
+    min-height: 40px;
 }
+
 .footer-a {
     font-size: 30px;
     color: #fff;
@@ -243,15 +243,18 @@ footer {
     text-decoration: none;
     margin: 0 0 0 0;
 }
+
 .footer-left {
     float: left;
     width: 33.3%;
     text-align: left;
     padding: 0 0 0 0;
 }
+
 .footer-a:hover {
     background-color: #484;
 }
+
 .footer-center {
     padding: 10px 0 0 0;
     height: 30px;
@@ -259,6 +262,7 @@ footer {
     text-align: center;
     width: 33.3%;
 }
+
 .footer-right {
     float: left;
     text-align: right;
@@ -268,22 +272,19 @@ footer {
 /*----------------------------------------FORMS------------------------------------------*/
 
 
-/*input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-}*/
 fieldset {
     box-sizing: border-box;
     float: left;
     height: 450px;
 }
-fieldset:first-of-type {
-    width: 340px;
-}
-fieldset:last-of-type {
-    width: 550px;
-}
+
+    fieldset:first-of-type {
+        width: 340px;
+    }
+
+    fieldset:last-of-type {
+        width: 550px;
+    }
 
 /*----------------------------------------RESPONSIVE------------------------------------*/
 
@@ -291,48 +292,52 @@ fieldset:last-of-type {
     .container {
         width: 1200px;
     }
+
     .content {
         width: 640px;
     }
+
     fieldset {
         width: 100% !important;
         height: auto;
     }
-    
 }
 
 
 
-@media screen and  (max-width: 1300px) {
-    header{
+@media screen and (max-width: 1300px) {
+    header {
         width: 100%;
     }
-    .container{
+
+    .container {
         display: flex;
         flex-direction: column;
-        width: 100%
+        width: 100%;
     }
-    .col1{
-        min-height: 0px;
-        float:none;
-        width: auto;
-        order:2;
 
-    }
-    .content{
+    .col1 {
         min-height: 0px;
-        float:none;
+        float: none;
         width: auto;
-        order:1;
+        order: 2;
+    }
 
-    }
-    .col2{
+    .content {
         min-height: 0px;
-        float:none;
+        float: none;
         width: auto;
-        order:3;
+        order: 1;
     }
-    footer{
+
+    .col2 {
+        min-height: 0px;
+        float: none;
+        width: auto;
+        order: 3;
+    }
+
+    footer {
         float: none;
         width: auto;
         order: 4;
@@ -343,7 +348,8 @@ fieldset:last-of-type {
     .logo {
         font-size: 30px;
     }
-   nav > .menu {
+
+    nav > .menu {
         display: none;
     }
 
@@ -351,25 +357,25 @@ fieldset:last-of-type {
         display: block;
     }
 
-    input#switch:checked ~ .menu{
+    input#switch:checked ~ .menu {
         display: block;
-
     }
-    input#switch:checked ~ .menu > ul > li{
-        float:none;
 
-    }
-    nav{
-        height:auto;
+        input#switch:checked ~ .menu > ul > li {
+            float: none;
+        }
+
+    nav {
+        height: auto;
         min-height: 40px;
         text-align: center;
     }
-    header{
+
+    header {
         width: 100%;
     }
-    .content{
-        padding:10px;
+
+    .content {
+        padding: 10px;
     }
-
-
 }
