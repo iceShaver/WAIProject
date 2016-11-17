@@ -24,7 +24,7 @@ header {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-        height: 180px;
+    height: 180px;
     background-image: url(../images/pexels-photo-27008.jpg);
     -ms-background-size: 100%;
     background-size: 100%;
@@ -82,7 +82,7 @@ nav {
         height: 40px;
     }
 
-        nav > .menu > ul > li:hover {
+        nav > .menu > ul > li:hover, li.selected {
             background-color: #484;
         }
 
@@ -152,18 +152,84 @@ input#switch {
 
 /*---------------------------------------BODY-------------------------------------------*/
 
+#frame {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    stroke: #000;
+
+    fill: #dfd;
+    /*transform: rotate(90deg);*/
+    animation: print 5s linear forwards;
+
+}
+#frame:hover {
+    animation: shake 0.2s linear forwards 3;
+}
+@keyframes shake {
+    0%   {transform: rotate(0deg)}
+    25%   {transform: rotate(-10deg)}
+    50%  {transform: rotate(0deg)}
+    75%  {transform: rotate(10deg)}
+    100%  {transform: rotate(0deg)}
+
+}
+
+.tile {
+    background-color: #595;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    padding: 20px 10px 10px 10px;
+    text-decoration: none;
+}
+
+    .tile:hover {
+        background-color: #393;
+    }
+
+.heading {
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.crosshead {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.source {
+    margin-top: 50px;
+    text-align: right;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+}
+
 .rwd-table {
     /*overflow-x: scroll;*/
     text-align: center;
 }
+
 table.actors {
     margin-left: auto;
     margin-right: auto;
-    
 }
-table.actors td {
-    padding: 20px;
-}
+
+    table.actors td {
+        padding: 20px;
+    }
 
 .container {
     width: 1500px;
@@ -287,7 +353,6 @@ footer {
 form {
     margin-left: auto;
     margin-right: auto;
-    
     /*box-sizing: border-box;*/
     /*float: left;*/
     /*height: 450px;*/
@@ -369,6 +434,7 @@ form {
 }
 
 @media screen and (max-width: 750px) {
+
     .logo {
         font-size: 30px;
     }
