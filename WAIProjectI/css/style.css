@@ -18,19 +18,19 @@ body {
 }
 
 header {
-    background-color: #fff;
+    /*background-color: #fff;*/
     width: 100%;
     padding: 0;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-}
-
-header {
-    height: 180px;
+        height: 180px;
     background-image: url(../images/pexels-photo-27008.jpg);
+    -ms-background-size: 100%;
     background-size: 100%;
 }
+
+
 
 .logo {
     color: white;
@@ -152,6 +152,18 @@ input#switch {
 
 /*---------------------------------------BODY-------------------------------------------*/
 
+.rwd-table {
+    /*overflow-x: scroll;*/
+    text-align: center;
+}
+table.actors {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+table.actors td {
+    padding: 20px;
+}
 
 .container {
     width: 1500px;
@@ -272,19 +284,31 @@ footer {
 /*----------------------------------------FORMS------------------------------------------*/
 
 
-fieldset {
-    box-sizing: border-box;
-    float: left;
-    height: 450px;
+form {
+    margin-left: auto;
+    margin-right: auto;
+    
+    /*box-sizing: border-box;*/
+    /*float: left;*/
+    /*height: 450px;*/
 }
 
-    fieldset:first-of-type {
-        width: 340px;
-    }
 
-    fieldset:last-of-type {
-        width: 550px;
-    }
+/*--------------------------------------GALLERY------------------------------------------*/
+.gallery img {
+    box-sizing: border-box;
+    margin: 20px;
+    height: 200px;
+    float: left;
+    /*padding: 10px;*/
+    border: 10px solid #9d9;
+    box-shadow: 0 0 10px #9d9;
+}
+
+
+
+
+
 
 /*----------------------------------------RESPONSIVE------------------------------------*/
 
