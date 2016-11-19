@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="Scripts/jquery-3.1.1.min.js" defer></script>
     <script type="text/javascript" src="Scripts/main.js" defer></script>
+    <script type="text/javascript" src="Scripts/counter.js" defer></script>
 </head>
 <body>
     <span id="top"></span>
@@ -59,8 +60,10 @@
             <div class="content block">
                 <div class="title">Kontakt</div>
                 <div class="text">
+                   
                     <form action="mailto:kamil-krolikowski@outlook.com" method="post">
                         <fieldset>
+                            <legend> Odwiedzasz nas <span id="counter"></span> raz, może chcesz coś napisać?</legend>
                             <p>
                                 <label for="name">Imię</label><br />
                                 <input type="text" id="name" name="name" />
@@ -135,6 +138,9 @@
         <footer>
             <div class="footer-left">
                 <a class="footer-a" href="#top">&uarr;</a>
+                <a class="footer-a color-red" onclick="setColorCSS('red')" href="#">R</a>
+                <a class="footer-a color-green" onclick="setColorCSS('default')" href="#">G</a>
+                <a class="footer-a color-blue" onclick="setColorCSS('blue')" href="#">B</a>
             </div>
             <div class="footer-center">
                 &copy; 2016 Kamil Królikowski

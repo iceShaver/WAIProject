@@ -1,28 +1,50 @@
-﻿
+﻿function setColorCSS(color) {
+
+    //var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+    localStorage.color = color;
+    if (color == "default") {
+        var colorLink = document.getElementById('colorcss');
+        colorLink.parentNode.removeChild(colorLink);
+    } else {
+        var colorlink = document.createElement("link");
+        colorlink.setAttribute("rel", "stylesheet");
+        colorlink.setAttribute("type", "text/css");
+        colorlink.setAttribute("href", "css/color-" + color + ".css");
+        colorlink.setAttribute("id", "colorcss");
+
+        document.getElementsByTagName("head").item(0).appendChild(colorlink);
+    }
+}
 function addPageToHistory() {
-    if (sessionStorage.length <= 10)
-        sessionStorage.setItem("historyPage" + sessionStorage.length, document.title);
+    if (sessionStorage.historyCount <= 10)
+        sessionStorage.setItem("historyPage" + sessionStorage.historyCount, document.title);
     else {
-        for (var i = 0; i < sessionStorage.length - 1; i++) {
+        for (var i = 0; i < sessionStorage.historyCount - 1; i++) {
             sessionStorage["historyPage" + i] = sessionStorage["historyPage" + (i + 1)];
         }
-        console.log("historyPage" + (sessionStorage.length - 1));
-        sessionStorage.removeItem("historyPage" + (sessionStorage.length - 1));
-        sessionStorage.length--;
-        sessionStorage.setItem("historyPage" + sessionStorage.length, document.title);
+        //console.log("historyPage" + (sessionStorage.historyCount - 1));
+        sessionStorage.removeItem("historyPage" + (sessionStorage.historyCount - 1));
+        sessionStorage.historyCount--;
+        sessionStorage.setItem("historyPage" + sessionStorage.historyCount, document.title);
 
     }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
+    if (sessionStorage.historyCount == null) {
+        sessionStorage.historyCount = 0;
+    } else
+        sessionStorage.historyCount++;  
     addPageToHistory();
     getHistory();
-
-
+    setColorCSS(localStorage.color);
 
 });
+
+
 function getHistory() {
     var pages = document.createDocumentFragment();
-    for (var i = sessionStorage.length - 1; i >= 0; i--) {
+    for (var i = sessionStorage.historyCount; i >= 0; i--) {
         var p = document.createElement('p');
         p.appendChild(document.createTextNode(sessionStorage.getItem("historyPage" + i)));
         pages.appendChild(p);
