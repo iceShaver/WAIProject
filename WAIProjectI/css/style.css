@@ -26,7 +26,6 @@ header {
     margin-right: auto;
     height: 180px;
     background-image: url(../images/pexels-photo-27008.jpg);
-    -ms-background-size: 100%;
     background-size: 100%;
 }
 
@@ -54,76 +53,77 @@ nav {
     margin: 0 auto;
     /*box-shadow: -1px 5px 10px #999;*/
 }
-nav-red{
+
+nav-red {
     background-color: #955;
-        border-top: 1px solid #733;
+    border-top: 1px solid #733;
     border-bottom: 1px solid #733;
 }
 
-    nav .menu ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        font-size: 18px;
+nav .menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 18px;
+    height: 40px;
+    line-height: 200%;
+    display: inline-block;
+}
+
+    nav .menu ul a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
         height: 40px;
-        line-height: 200%;
-        display: inline-block;
     }
 
-        nav .menu ul a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            height: 40px;
-        }
+nav > .menu > ul > li:hover > a {
+    color: #afa;
+}
 
-    nav > .menu > ul > li:hover > a {
-        color: #afa;
+nav > .menu > ul > li {
+    float: left;
+    width: 150px;
+    height: 40px;
+}
+
+    nav > .menu > ul > li:hover, li.selected {
+        background-color: #484;
     }
 
-    nav > .menu > ul > li {
+    nav > .menu > ul > li > ul {
+        visibility: hidden;
+        transform: scaleY(0); /* zwijamy cały element */
+        -webkit-transform: scaleY(0);
+        transform-origin: 50% 0; /* ustawiamy punkt zwijania względem środka górnej krawędzi */
+        -webkit-transform-origin: 50% 0;
+        transition: 200ms; /* wydłużamy wykonywanie stylów */
+    }
+
+    nav > .menu > ul > li:hover > ul {
+        visibility: visible;
+        transform: scaleY(1); /* rozwijamy element do całej jego wysokości */
+        -webkit-transform: scaleY(1);
+        height: auto;
+    }
+
+    nav > .menu > ul > li > ul > li {
+        background-color: #6a6;
+        position: relative;
         float: left;
         width: 150px;
         height: 40px;
+        z-index: 80;
+        border-top: 1px dashed #fff;
     }
 
-        nav > .menu > ul > li:hover, li.selected {
-            background-color: #484;
+        nav > .menu > ul > li > ul > li:hover {
+            background-color: #595;
         }
 
-        nav > .menu > ul > li > ul {
-            visibility: hidden;
-            transform: scaleY(0); /* zwijamy cały element */
-            -webkit-transform: scaleY(0);
-            transform-origin: 50% 0; /* ustawiamy punkt zwijania względem środka górnej krawędzi */
-            -webkit-transform-origin: 50% 0;
-            transition: 200ms; /* wydłużamy wykonywanie stylów */
-        }
-
-        nav > .menu > ul > li:hover > ul {
-            visibility: visible;
-            transform: scaleY(1); /* rozwijamy element do całej jego wysokości */
-            -webkit-transform: scaleY(1);
-            height: auto;
-        }
-
-        nav > .menu > ul > li > ul > li {
-            background-color: #6a6;
-            position: relative;
-            float: left;
-            width: 150px;
-            height: 40px;
-            z-index: 80;
-            border-top: 1px dashed #fff;
-        }
-
-            nav > .menu > ul > li > ul > li:hover {
-                background-color: #595;
+            nav > .menu > ul > li > ul > li:hover > a {
+                color: #afa;
             }
-
-                nav > .menu > ul > li > ul > li:hover > a {
-                    color: #afa;
-                }
 
 label[for=switch] {
     color: #fff;
@@ -162,9 +162,6 @@ input#switch {
     margin-left: auto;
     margin-right: auto;
     height: 200px;
-    stroke: #000;
-    fill: #dfd;
-    /*transform: rotate(90deg);*/
     animation: print 5s linear forwards;
 }
 
@@ -293,6 +290,12 @@ table.actors {
         padding: 0px;
     }
 
+    .col2 ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
     .col2 a {
         display: block;
         text-decoration: none;
@@ -363,13 +366,16 @@ footer {
     text-align: right;
     width: 33.3%;
 }
-.color-red{
+
+.color-red {
     background-color: #955;
 }
-.color-green{
+
+.color-green {
     background-color: #595;
 }
-.color-blue{
+
+.color-blue {
     background-color: #559;
 }
 
@@ -412,8 +418,6 @@ form {
     .content {
         width: 640px;
     }
-
-
 }
 
 

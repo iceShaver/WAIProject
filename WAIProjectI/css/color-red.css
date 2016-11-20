@@ -63,12 +63,6 @@ label[for=switch] {
 
 /*---------------------------------------BODY-------------------------------------------*/
 
-#frame {
-
-    stroke: #000;
-    fill: #fdd;
-
-}
 
 
 .tile {
@@ -81,9 +75,6 @@ label[for=switch] {
     .tile:hover {
         background-color: #933;
     }
-
-
-
 
 .block {
 

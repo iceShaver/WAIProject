@@ -1,11 +1,14 @@
-﻿function setColorCSS(color) {
+﻿
+
+function setColorCSS(color) {
 
     //var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+    var colorLink = document.getElementById('colorcss');
     localStorage.color = color;
-    if (color == "default") {
-        var colorLink = document.getElementById('colorcss');
+    if (colorLink != null) {
         colorLink.parentNode.removeChild(colorLink);
-    } else {
+    }
+    if (color != "default")  {
         var colorlink = document.createElement("link");
         colorlink.setAttribute("rel", "stylesheet");
         colorlink.setAttribute("type", "text/css");
@@ -44,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function getHistory() {
     var pages = document.createDocumentFragment();
-    for (var i = sessionStorage.historyCount; i >= 0; i--) {
+    for (var i = sessionStorage.historyCount; i > 0; i--) {
         var p = document.createElement('p');
         p.appendChild(document.createTextNode(sessionStorage.getItem("historyPage" + i)));
         pages.appendChild(p);
@@ -55,6 +58,9 @@ function getHistory() {
 }
 
 $(document).ready(function () {
+    $(".sortable").sortable();
+    $(".sortable").disableSelection();
+    $(".picture").draggable();
     var navY = $('nav').offset().top;
     var stickyNav = function () {
         var scrollY = $(window).scrollTop();

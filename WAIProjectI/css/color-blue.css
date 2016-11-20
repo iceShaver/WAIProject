@@ -1,23 +1,17 @@
-﻿
-body {
+﻿body {
     color: #000;
 }
-
 
 .logo {
     color: white;
 }
 
 /*----------------------------------------------NAV---------------------------------------*/
-
-
 nav {
     background-color: #559;
     border-top: 1px solid #337;
     border-bottom: 1px solid #337;
 }
-
-
 
     nav .menu ul a {
         color: #fff;
@@ -27,14 +21,9 @@ nav {
         color: #aaf;
     }
 
-
-
     nav > .menu > ul > li:hover, li.selected {
         background-color: #448;
     }
-
-
-
 
     nav > .menu > ul > li > ul > li {
         border-top: 1px dashed #fff;
@@ -57,13 +46,6 @@ label[for=switch] {
 
 
 /*---------------------------------------BODY-------------------------------------------*/
-
-#frame {
-    stroke: #000;
-    fill: #ddf;
-}
-
-
 .tile {
     background-color: #559;
     color: #fff;
@@ -72,9 +54,6 @@ label[for=switch] {
     .tile:hover {
         background-color: #339;
     }
-
-
-
 
 .block {
     box-shadow: 5px 5px 10px #999;
@@ -116,13 +95,9 @@ footer {
     color: #fff;
 }
 
-
     .footer-a:hover {
         background-color: #448;
     }
-
-
-
 
 
 /*--------------------------------------GALLERY------------------------------------------*/
