@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    /*background-color: #fff;*/
+
     width: 100%;
     padding: 0;
     text-align: center;
@@ -51,7 +51,7 @@ nav {
     height: 40px;
     text-align: center;
     margin: 0 auto;
-    /*box-shadow: -1px 5px 10px #999;*/
+
 }
 
 nav-red {
@@ -93,17 +93,14 @@ nav > .menu > ul > li {
 
     nav > .menu > ul > li > ul {
         visibility: hidden;
-        transform: scaleY(0); /* zwijamy cały element */
-        -webkit-transform: scaleY(0);
-        transform-origin: 50% 0; /* ustawiamy punkt zwijania względem środka górnej krawędzi */
-        -webkit-transform-origin: 50% 0;
-        transition: 200ms; /* wydłużamy wykonywanie stylów */
+        transform: scaleY(0);
+        transform-origin: 50% 0;
+        transition: 200ms;
     }
 
     nav > .menu > ul > li:hover > ul {
         visibility: visible;
-        transform: scaleY(1); /* rozwijamy element do całej jego wysokości */
-        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
         height: auto;
     }
 
@@ -234,7 +231,6 @@ input#switch {
 }
 
 .rwd-table {
-    /*overflow-x: scroll;*/
     text-align: center;
 }
 
@@ -385,9 +381,6 @@ footer {
 form {
     margin-left: auto;
     margin-right: auto;
-    /*box-sizing: border-box;*/
-    /*float: left;*/
-    /*height: 450px;*/
 }
 
 
@@ -397,7 +390,6 @@ form {
     margin: 20px;
     height: 200px;
     float: left;
-    /*padding: 10px;*/
     border: 10px solid #9d9;
     box-shadow: 0 0 10px #9d9;
 }

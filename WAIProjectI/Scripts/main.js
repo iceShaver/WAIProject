@@ -1,8 +1,6 @@
 ﻿
 
 function setColorCSS(color) {
-
-    //var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
     var colorLink = document.getElementById('colorcss');
     localStorage.color = color;
     if (colorLink != null) {
@@ -25,7 +23,6 @@ function addPageToHistory() {
         for (var i = 0; i < sessionStorage.historyCount - 1; i++) {
             sessionStorage["historyPage" + i] = sessionStorage["historyPage" + (i + 1)];
         }
-        //console.log("historyPage" + (sessionStorage.historyCount - 1));
         sessionStorage.removeItem("historyPage" + (sessionStorage.historyCount - 1));
         sessionStorage.historyCount--;
         sessionStorage.setItem("historyPage" + sessionStorage.historyCount, document.title);
