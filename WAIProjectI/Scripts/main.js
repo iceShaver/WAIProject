@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sessionStorage.historyCount++;  
     addPageToHistory();
     getHistory();
+	if(localStorage.color != null)
     setColorCSS(localStorage.color);
 
 });
